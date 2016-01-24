@@ -26,7 +26,7 @@ router.post('/tickets', function (req, res, next) {
     var newTicket = {};
     console.log('trying to add a new ticket...');
     console.log('req.body:', req.body);
-    if (validator.isNull(req.body.title) || validator.isNull(req.body.content) || validator.isNull(req.body.userEmail)) {
+    if (validator.isNull(req.body.title) || validator.isNull(req.body.userEmail)) {
         console.log('\x1b[33m%s\x1b[0m', 'ticket was not added: missing details');
         return res.status(500).json('ERROR: missing details');
     } else if (!validator.isEmail(req.body.userEmail)) {
