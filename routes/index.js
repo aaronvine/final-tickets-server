@@ -73,7 +73,7 @@ router.get('/tickets/:id/replies', function (req, res, next) {
 
 /* GET test */
 router.get('/test', function (req, res, next) {
-    res.json('Welcome!');
+    res.json('Awesome Title');
 });
 
 module.exports = router;
